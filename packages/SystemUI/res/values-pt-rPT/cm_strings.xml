@@ -36,10 +36,10 @@
   <string name="lockscreen_none_target">Nenhum</string>
   <!-- Dialog title for navigation bar button selection -->
   <string name="navbar_dialog_title">Escolha uma ação para atribuir</string>
-  <string name="navbar_home_button">Botão Home</string>
-  <string name="navbar_recent_button">Botão Recentes</string>
-  <string name="navbar_search_button">Botão Pesquisa</string>
-  <string name="navbar_back_button">Botão Voltar</string>
+  <string name="navbar_home_button">Botão Página Inicial</string>
+  <string name="navbar_recent_button">Botão de Visão geral</string>
+  <string name="navbar_search_button">Botão de pesquisa</string>
+  <string name="navbar_back_button">Botão Anterior</string>
   <string name="navbar_empty_button">Botão vazio</string>
   <string name="navbar_menu_conditional_button">Botão Menu (esconder auto)</string>
   <string name="navbar_menu_always_button">Botão Menu (sempre visível)</string>
@@ -71,14 +71,14 @@
   <string name="quick_settings_edit_label">Editar os mosaicos</string>
   <string name="quick_settings_cannot_delete_edit_tile">Não é possível eliminar o mosaico de Editar</string>
   <string name="qs_tiles_reset_confirmation">Repor os valores de origem dos mosaicos de definições rápidas?</string>
-  <string name="quick_settings_tile_reset_to_default">Restaurar a disposição padrão</string>
+  <string name="quick_settings_tile_reset_to_default">Repor a disposição padrão</string>
   <string name="quick_settings_title_header">Cabeçalho</string>
   <string name="quick_settings_title_tiles">Mosaicos</string>
   <string name="quick_settings_title_show_weather">Mostrar o tempo</string>
   <string name="quick_settings_title_show_brightness_slider">Mostrar o controlo deslizante de brilho</string>
   <string name="quick_settings_title_enlarge_first_row">Ampliar a primeira linha</string>
   <!-- Screen pinning dialog description (for devices without navbar) -->
-  <string name="screen_pinning_description_no_navbar">Irá ficar visível até que o solte. Toque e segure o botão Voltar para soltar.</string>
+  <string name="screen_pinning_description_no_navbar">Irá ficar visível até que o solte. Toque e segure o botão Anterior para soltar.</string>
   <string name="quick_settings_custom_tile_detail_title">Mosaicos personalizados</string>
   <string name="quick_settings_remove">Remover mosaico</string>
   <string name="quick_settings_network_adb_label">ADB através da rede</string>
@@ -86,7 +86,7 @@
   <string name="quick_settings_nfc_label">NFC</string>
   <string name="quick_settings_profiles">Perfis de sistema</string>
   <string name="quick_settings_profiles_off">Perfis desativados</string>
-  <string name="quick_settings_heads_up_label">Notificações pop-up</string>
+  <string name="quick_settings_heads_up_label">Notificações flutuantes</string>
   <string name="quick_settings_battery_saver_label">Economizador de bateria</string>
   <!-- quick settings battery saver label to show when device is charging and tile is disabled -->
   <string name="quick_settings_battery_saver_label_charging">Economizador de bateria (a carregar)</string>
@@ -113,7 +113,7 @@
   <string name="accessibility_quick_settings_screen_timeout_changed">Tempo limite do ecrã alterado para <xliff:g id="timeout" example="30 seconds">%s</xliff:g>.</string>
   <string name="qs_tile_performance">Modo de bateria</string>
   <!-- Content description of the battery mode tile in quick settings when on, power save mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_quick_settings_perf_profile_pwrsv">Modo de bateria: modo de poupança de energia.</string>
+  <string name="accessibility_quick_settings_perf_profile_pwrsv">Modo de bateria: modo de poupança de bateria.</string>
   <!-- Content description of the battery mode tile in quick settings when on, balanced mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_perf_profile_bal">Modo de bateria: modo equilibrado.</string>
   <!-- Content description of the battery mode tile in quick settings when on, performance mode (not shown on the screen). [CHAR LIMIT=NONE] -->
@@ -123,7 +123,7 @@
   <!-- Content description of the battery mode tile in quick settings when on, quick mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_perf_profile_bias_perf">Modo de bateria: modo rápido.</string>
   <!-- Announcement made when the battery mode tile changes to power save (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_quick_settings_perf_profile_changed_pwrsv">Modo de bateria alterado para o modo de poupança de energia.</string>
+  <string name="accessibility_quick_settings_perf_profile_changed_pwrsv">Modo de bateria alterado para o modo de poupança de bateria.</string>
   <!-- Announcement made when the battery mode tile changes to balanced (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_perf_profile_changed_bal">Modo de bateria alterado para o modo equilibrado.</string>
   <!-- Announcement made when the battery mode tile changes to performance (not shown on the screen). [CHAR LIMIT=NONE] -->
@@ -150,13 +150,13 @@
   <!-- Announcement made when ambient display changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_ambient_display_changed_on">A visualização de ambiente foi ativada.</string>
   <!-- Content description of the heads up tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_quick_settings_heads_up_off">Notificações pop-up desativadas.</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notificações flutuantes desativadas.</string>
   <!-- Content description of the heads up tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_quick_settings_heads_up_on">Notificações pop-up ativadas.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Notificações flutuantes ativadas.</string>
   <!-- Announcement made when heads up changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_quick_settings_heads_up_changed_off">As notificações pop-up foram desativadas.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">As notificações flutuantes foram desativadas.</string>
   <!-- Announcement made when heads up changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_quick_settings_heads_up_changed_on">As notificações pop-up foram ativadas.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">As notificações flutuantes foram ativadas.</string>
   <!-- Content description of the caffeine tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_caffeine_off">Cafeína desligada.</string>
   <!-- Content description of the caffeine tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
@@ -172,12 +172,14 @@
   <!-- Dynamic tiles -->
   <string name="quick_settings_dynamic_tile_detail_title">Mosaicos dinâmicos</string>
   <string name="dynamic_qs_tile_next_alarm_label">Próximo alarme</string>
-  <string name="dynamic_qs_tile_ime_selector_label">Seletor de método de entrada</string>
+  <string name="dynamic_qs_tile_ime_selector_label">Seletor de método de introdução</string>
   <string name="dynamic_qs_tile_su_label">Acesso root</string>
+  <string name="dynamic_qs_tile_themes_label">Temas</string>
   <string name="quick_settings_title_advanced_location">Localização com 3 estados</string>
   <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_battery_saving">Localização: poupança de bateria.</string>
   <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_gps_only">Localização: apenas no dispositivo.</string>
   <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_high_accuracy">Localização: alta precisão.</string>
   <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
@@ -185,19 +187,20 @@
   <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
   <string name="quick_settings_location_battery_saving_label">Poupança de bateria</string>
   <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
-  <string name="quick_settings_location_gps_only_label">Apenas dispositivo</string>
+  <string name="quick_settings_location_gps_only_label">Apenas no dispositivo</string>
   <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
   <string name="quick_settings_location_high_accuracy_label">Alta precisão</string>
   <!-- Announcement made when the location tile changes to battery saving (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_changed_battery_saving">Modo de localização alterado para poupança de bateria.</string>
   <!-- Announcement made when the location tile changes to sensors only (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_gps_only">Modo de localização alterado para apenas no dispositivo.</string>
   <!-- Announcement made when the location tile changes to high accuracy (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_changed_high_accuracy">Modo de localização alterado para alta precisão.</string>
   <string name="quick_settings_tiles_category_system">Mosaicos do sistema</string>
   <!-- detail header when adding a tile -->
   <string name="quick_settings_tiles_add_tiles">Adicionar um mosaico</string>
   <!-- Hotspot dialog message -->
-  <string name="hotspot_apm_message">Não é possível ligar-se a redes móveis enquanto o modo de voo estiver ativado. Desative o modo de voo e tente novamente.</string>
+  <string name="hotspot_apm_message">Não é possível ligar-se a redes móveis enquanto o modo de avião estiver ativado. Desative o modo de avião e tente novamente.</string>
   <!-- Notification which notifies user flashlight is enabled -->
   <string name="quick_settings_tile_flashlight_not_title">A lanterna está ligada</string>
   <string name="quick_settings_tile_flashlight_not_summary">Toque para desligar</string>

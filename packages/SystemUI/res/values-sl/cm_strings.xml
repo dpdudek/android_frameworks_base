@@ -70,7 +70,7 @@
   <string name="qs_tile_edit_header_instruction">Pritisnite in pridržite ploščice za preurejanje</string>
   <string name="quick_settings_edit_label">Uredi ploščice</string>
   <string name="quick_settings_cannot_delete_edit_tile">Ploščice za urejanje ni mogoče izbrisati</string>
-  <string name="qs_tiles_reset_confirmation">Ponastavi ploščice hitrih nastavitev na privzeto nastavitev?</string>
+  <string name="qs_tiles_reset_confirmation">Ponastavi ploščice Hitrih nastavitev na privzeto nastavitev?</string>
   <string name="quick_settings_tile_reset_to_default">Ponastavi na privzeto razporeditev</string>
   <string name="quick_settings_title_header">Glava</string>
   <string name="quick_settings_title_tiles">Ploščice</string>
@@ -81,7 +81,7 @@
   <string name="screen_pinning_description_no_navbar">To jo ohrani prikazano, dokler je ne odpnete. Tapnite in pridržite gumb Nazaj, da jo odpnete.</string>
   <string name="quick_settings_custom_tile_detail_title">Ploščica po meri</string>
   <string name="quick_settings_remove">Odstrani ploščico</string>
-  <string name="quick_settings_network_adb_label">ADB preko omrežja</string>
+  <string name="quick_settings_network_adb_label">ADB prek omrežja</string>
   <string name="quick_settings_compass_label">Kompas</string>
   <string name="quick_settings_nfc_label">NFC</string>
   <string name="quick_settings_profiles">Sistemski profili</string>
@@ -174,6 +174,7 @@
   <string name="dynamic_qs_tile_next_alarm_label">Naslednja budilka</string>
   <string name="dynamic_qs_tile_ime_selector_label">Izbirnik IME</string>
   <string name="dynamic_qs_tile_su_label">Skrbniški dostop</string>
+  <string name="dynamic_qs_tile_themes_label">Teme</string>
   <string name="quick_settings_title_advanced_location">Tri stanja lokacije</string>
   <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_battery_saving">Poročanje o lokaciji: način varčevanja energije.</string>
@@ -186,7 +187,7 @@
   <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
   <string name="quick_settings_location_battery_saving_label">Varčevanje z energijo</string>
   <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
-  <string name="quick_settings_location_gps_only_label">Samo naprava</string>
+  <string name="quick_settings_location_gps_only_label">Samo v napravi</string>
   <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
   <string name="quick_settings_location_high_accuracy_label">Visoka natančnost</string>
   <!-- Announcement made when the location tile changes to battery saving (not shown on the screen). [CHAR LIMIT=NONE] -->

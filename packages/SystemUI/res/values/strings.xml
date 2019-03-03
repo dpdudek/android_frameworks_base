@@ -20,10 +20,6 @@
     <!-- Name of the status bar as seen in the applications info settings page. [CHAR LIMIT=12] -->
     <string name="app_label">System UI</string>
 
-    <!-- The text for the button in the notification window-shade that clears
-         all of the currently visible notifications. [CHAR LIMIT=10]-->
-    <string name="status_bar_clear_all_button">Clear</string>
-
     <!-- Title shown in recents popup for removing an application from the list -->
     <string name="status_bar_recent_remove_item_title">Remove from list</string>
 
@@ -1136,4 +1132,10 @@
     <!-- Bluetooth enablement ok text [CHAR LIMIT=40] -->
     <string name="enable_bluetooth_confirmation_ok">Turn on</string>
 
+
+    <!-- Warning shown when user input has been blocked due to another app overlaying screen
+         content. Since we don't know what the app is showing on top of the input target, we
+         can't verify user consent. [CHAR LIMIT=NONE] -->
+    <string name="touch_filtered_warning">Because an app is obscuring a permission request, Settings
+        can’t verify your response.</string>
 </resources>
