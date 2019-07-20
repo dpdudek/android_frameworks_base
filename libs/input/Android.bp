@@ -39,7 +39,7 @@ cc_library_shared {
         "-Werror",
         "-Wunused",
         "-Wunreachable-code",
-        "DDISABLE_CURSOR_LAYER"
+        "-DDISABLE_CURSOR_LAYER"
     ],
 
 }
