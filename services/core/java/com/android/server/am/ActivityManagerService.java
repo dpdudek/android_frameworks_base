@@ -3635,7 +3635,8 @@ public final class ActivityManagerService extends ActivityManagerNative
             final int procCount = procs.size();
             for (int i = 0; i < procCount; i++) {
                 final int procUid = procs.keyAt(i);
-                if (UserHandle.isApp(procUid) || !UserHandle.isSameUser(procUid, uid)) {
+                if (UserHandle.isApp(procUid) || !UserHandle.isSameUser(procUid, uid)
+                        || UserHandle.isIsolated(procUid)) {
                     // Don't use an app process or different user process for system component.
                     continue;
                 }
@@ -4914,9 +4915,9 @@ public final class ActivityManagerService extends ActivityManagerNative
                 userId, false, ALLOW_FULL_ONLY, "startActivityInPackage", null);
 
         // TODO: Switch to user app stacks here.
-        int ret = mActivityStarter.startActivityMayWait(null, uid, callingPackage, intent,
-                resolvedType, null, null, resultTo, resultWho, requestCode, startFlags,
-                null, null, null, bOptions, false, userId, container, inTask);
+        int ret = mActivityStarter.startActivityMayWait(null, uid, ActivityStarter.PID_NULL, uid,
+                callingPackage, intent, resolvedType, null, null, resultTo, resultWho, requestCode,
+                startFlags, null, null, null, bOptions, false, userId, container, inTask);
         return ret;
     }
 
@@ -4936,12 +4937,19 @@ public final class ActivityManagerService extends ActivityManagerNative
     final int startActivitiesInPackage(int uid, String callingPackage,
             Intent[] intents, String[] resolvedTypes, IBinder resultTo,
             Bundle bOptions, int userId) {
+        return startActivitiesInPackage(uid, ActivityStarter.PID_NULL, UserHandle.USER_NULL,
+                callingPackage, intents, resolvedTypes, resultTo, bOptions, userId);
+    }
+
+    final int startActivitiesInPackage(int uid, int realCallingPid, int realCallingUid,
+                                       String callingPackage, Intent[] intents, String[] resolvedTypes,
+                                       IBinder resultTo, Bundle bOptions, int userId) {
 
         userId = mUserController.handleIncomingUser(Binder.getCallingPid(), Binder.getCallingUid(),
                 userId, false, ALLOW_FULL_ONLY, "startActivityInPackage", null);
         // TODO: Switch to user app stacks here.
-        int ret = mActivityStarter.startActivities(null, uid, callingPackage, intents, resolvedTypes,
-                resultTo, bOptions, userId);
+        int ret = mActivityStarter.startActivities(null, uid, realCallingPid, realCallingUid,
+                callingPackage, intents, resolvedTypes, resultTo, bOptions, userId);
         return ret;
     }
 
@@ -6631,7 +6639,7 @@ public final class ActivityManagerService extends ActivityManagerNative
         }
     }
 
-    private final boolean attachApplicationLocked(IApplicationThread thread,
+    private boolean attachApplicationLocked(@NonNull IApplicationThread thread,
             int pid) {
 
         // Find the application record that is being attached...  either via
@@ -6879,6 +6887,9 @@ public final class ActivityManagerService extends ActivityManagerNative
 
     @Override
     public final void attachApplication(IApplicationThread thread) {
+        if (thread == null) {
+            throw new SecurityException("Invalid application interface");
+        }
         synchronized (this) {
             int callingPid = Binder.getCallingPid();
             final long origId = Binder.clearCallingIdentity();
